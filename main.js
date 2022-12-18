@@ -53,3 +53,4 @@ class Square extends Shape {
 
 let mySquare = new Square(4);
 console.log(mySquare);
+mySquare.getArea(mySquare.sides, mySquare.sideLength);
