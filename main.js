@@ -67,12 +67,13 @@ constructor(name, author, year){
 
 let form = document.getElementById("my_form");
 
+//Creates a new instance of Book by taking values from the form.
 form.addEventListener('submit', function handleSubmit(event){
     event.preventDefault();
 
     let option1 = document.querySelector(".field1").value;
-    let option2 = document.querySelector(".field1").value;
-    let option3 = document.querySelector(".field1").value;
+    let option2 = document.querySelector(".field2").value;
+    let option3 = document.querySelector(".field3").value;
 
     let book = new Book(option1, option2, option3);
     console.log(book);
@@ -82,6 +83,11 @@ form.addEventListener('submit', function handleSubmit(event){
 function myDisplay(book){
 console.log(book);
 
+
+/* 
+displays values taken from form into HTML.
+Will overwrite existing data, need to create a new element so multiple instances can be viewed/
+
 document.getElementById("output").innerHTML = 
 `
 <ul>
@@ -89,6 +95,19 @@ document.getElementById("output").innerHTML =
 <li>Author: ${book.author}</li>
 <li>Year: ${book.year}</li>
 </ul>
-
 `
+*/
+
+let newDiv = document.createElement("div");
+
+newDiv.innerHTML =
+`
+<ul>
+<li>Name: ${book.name}</li>
+<li>Author: ${book.author}</li>
+<li>Year: ${book.year}</li>
+</ul>
+`;
+
+document.body.appendChild(newDiv);
 }
