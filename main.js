@@ -74,5 +74,10 @@ form.addEventListener('submit', function handleSubmit(event){
     let option2 = document.querySelector(".field1").value;
     let option3 = document.querySelector(".field1").value;
 
-    
+    let book = new Book(option1, option2, option3);
+    console.log(book);
 })
+
+function myDisplay(book){
+console.log(book);
+}
