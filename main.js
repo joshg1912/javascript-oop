@@ -76,8 +76,19 @@ form.addEventListener('submit', function handleSubmit(event){
 
     let book = new Book(option1, option2, option3);
     console.log(book);
+    myDisplay(book)
 })
 
 function myDisplay(book){
 console.log(book);
+
+document.getElementById("output").innerHTML = 
+`
+<ul>
+<li>Name: ${book.name}</li>
+<li>Author: ${book.author}</li>
+<li>Year: ${book.year}</li>
+</ul>
+
+`
 }
