@@ -19,9 +19,13 @@ let myBook = new Book('my book', 'me', false);
 
 console.log(myBook.status);
 myBook.isCheckedOut(myBook.status);
+console.log(myBook);
 
 
 class Shape{
+    name;
+    sides;
+    sideLength;
     constructor(name, sides, sideLength){
         this.name = name;
         this.sides = sides;
@@ -31,5 +35,21 @@ class Shape{
         console.log(sides * sideLength);
     }
 }
-let square = new Shape("square", 4, 4);
-square.getPerimeter(square.sides, square.sideLength);
+let shape1 = new Shape("square", 4, 4);
+shape1.getPerimeter(shape1.sides, shape1.sideLength);
+
+
+class Square extends Shape {
+   constructor(sideLength){
+    super(sideLength);
+    this.name = "squares";
+    this.sides = 4;
+    this.sideLength = sideLength;
+   }
+    getArea(sides,sideLength){
+        console.log((sides/2) * sideLength);
+    }
+}
+
+let mySquare = new Square(4);
+console.log(mySquare);
