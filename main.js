@@ -1,3 +1,4 @@
+/*
 class Book {
     constructor(name, author, status){
         this.name = name;
@@ -21,7 +22,7 @@ console.log(myBook.status);
 myBook.isCheckedOut(myBook.status);
 console.log(myBook);
 
-
+*/
 class Shape{
     name;
     sides;
@@ -62,5 +63,16 @@ constructor(name, author, year){
     this.author = author;
     this.year = year;
 }
-
 }
+
+let form = document.getElementById("my_form");
+
+form.addEventListener('submit', function handleSubmit(event){
+    event.preventDefault();
+
+    let option1 = document.querySelector(".field1").value;
+    let option2 = document.querySelector(".field1").value;
+    let option3 = document.querySelector(".field1").value;
+
+    
+})
