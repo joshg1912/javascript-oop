@@ -111,4 +111,5 @@ newDiv.innerHTML =
 `;
 //appends new element with content to body
 document.body.appendChild(newDiv);
+newDiv.className = "dynamic";
 }
