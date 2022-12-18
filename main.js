@@ -54,3 +54,13 @@ class Square extends Shape {
 let mySquare = new Square(4);
 console.log(mySquare);
 mySquare.getArea(mySquare.sides, mySquare.sideLength);
+
+
+class Book {
+constructor(name, author, year){
+    this.name = name;
+    this.author = author;
+    this.year = year;
+}
+
+}
