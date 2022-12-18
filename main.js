@@ -76,8 +76,8 @@ form.addEventListener('submit', function handleSubmit(event){
     let option3 = document.querySelector(".field3").value;
 
     let book = new Book(option1, option2, option3);
-    console.log(book);
-    myDisplay(book)
+    myDisplay(book);
+    form.reset();
 })
 
 function myDisplay(book){
@@ -97,9 +97,10 @@ document.getElementById("output").innerHTML =
 </ul>
 `
 */
-
+ //creates new element
 let newDiv = document.createElement("div");
 
+//adds content to new div
 newDiv.innerHTML =
 `
 <ul>
@@ -108,6 +109,6 @@ newDiv.innerHTML =
 <li>Year: ${book.year}</li>
 </ul>
 `;
-
+//appends new element with content to body
 document.body.appendChild(newDiv);
 }
