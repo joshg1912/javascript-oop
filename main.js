@@ -58,8 +58,8 @@ mySquare.getArea(mySquare.sides, mySquare.sideLength);
 
 
 class Book {
-constructor(name, author, year){
-    this.name = name;
+constructor(title, author, year){
+    this.title = title;
     this.author = author;
     this.year = year;
 }
@@ -98,13 +98,14 @@ document.getElementById("output").innerHTML =
 `
 */
  //creates new element
+ /*
 let newDiv = document.createElement("div");
 
 //adds content to new div
 newDiv.innerHTML =
 `
 <ul>
-<li>Name: ${book.name}</li>
+<li>Title: ${book.title}</li>
 <li>Author: ${book.author}</li>
 <li>Year: ${book.year}</li>
 </ul>
@@ -112,4 +113,20 @@ newDiv.innerHTML =
 //appends new element with content to body
 document.body.appendChild(newDiv);
 newDiv.className = "dynamic";
+*/
+
+let newDiv = document.createElement("div");
+
+newDiv.innerHTML = 
+`
+<ul>
+<li>Title: ${book.title}</li>
+<li>Author: ${book.author}</li>
+<li>Year: ${book.year}</li>
+</ul>
+`;
+newDiv.className = "dynamic";
+let output = document.getElementById("output");
+output.appendChild(newDiv);
+
 }

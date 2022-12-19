@@ -1,3 +1,26 @@
+body {
+    margin: 0 auto;
+}
+
+#output {
+    display: flex;
+    max-width: 80%;
+}
+
 .dynamic {
     color:red;
+    width: 50%;
+}
+
+#my_form {
+    width: 80%;
+}
+
+.field {
+    width: 80%;
+    margin-bottom: 1%;
+}
+
+button {
+    width: 20%;
 }
